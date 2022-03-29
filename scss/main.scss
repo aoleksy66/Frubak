@@ -255,6 +255,7 @@ header::before {
 		&__right {
 			position: relative;
 			display: flex;
+			flex-direction: row-reverse;
 			min-height: 20rem;
 			&-img {
 				position: absolute;
