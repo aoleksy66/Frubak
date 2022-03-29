@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +25,7 @@ a {
 	background-color: rgba(255, 255, 255, 0.6);
 	z-index: 10;
 	color: white;
+
 	&__logo {
 		position: absolute;
 		margin-left: 3rem;
@@ -43,7 +45,6 @@ a {
 		gap: 1.8rem;
 		margin-right: 2rem;
 		font-size: 1rem;
-
 		font-weight: 600;
 		width: 80%;
 		top: 1.5rem;
@@ -52,6 +53,7 @@ a {
 		&-element {
 			text-decoration: none;
 			color: black;
+
 			&:hover {
 				color: #ddd;
 			}
