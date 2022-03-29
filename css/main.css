@@ -254,6 +254,9 @@ header::before {
     border-radius: 20px;
     overflow: hidden;
   }
+  .about article {
+    text-shadow: none;
+  }
   .about__left {
     position: relative;
     display: -webkit-box;

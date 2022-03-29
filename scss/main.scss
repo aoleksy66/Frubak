@@ -225,6 +225,9 @@ header::before {
 	.about {
 		border-radius: 20px;
 		overflow: hidden;
+		article {
+			text-shadow: none;
+		}
 		&__left {
 			position: relative;
 			display: flex;
