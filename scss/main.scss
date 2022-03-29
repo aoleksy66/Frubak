@@ -1,0 +1,214 @@
+@import url(_components.scss);
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	font-size: 62.5%;
+	font-family: 'Montserrat', sans-serif;
+}
+a {
+	cursor: pointer;
+}
+// NAV
+.nav {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	min-height: 5rem;
+	background-color: rgba(255, 255, 255, 0.6);
+	z-index: 10;
+	color: white;
+	&__logo {
+		position: absolute;
+		margin-left: 3rem;
+		margin-right: 0;
+		min-width: 10rem;
+		min-height: 5rem;
+		background-image: url(/Assets/logo_white.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__list {
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 1.8rem;
+		margin-right: 2rem;
+		font-size: 1rem;
+
+		font-weight: 600;
+		width: 80%;
+		top: 1.5rem;
+		right: 0;
+		visibility: hidden;
+		&-element {
+			text-decoration: none;
+			color: black;
+			&:hover {
+				color: #ddd;
+			}
+		}
+	}
+	.burger {
+		position: absolute;
+		padding-right: 2rem;
+		min-width: 3rem;
+		top: 2.5rem;
+		transform: translateY(-50%);
+		right: 0;
+		cursor: pointer;
+		font-size: 2rem;
+	}
+}
+// NAV END
+//HEADER
+.header {
+	font-size: 4rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+//HERO-IMG
+
+.hero-img {
+	position: relative;
+	height: 100vh;
+	background-image: url(/Assets/hero_img_small.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.fa-circle-arrow-down {
+		position: absolute;
+		bottom: 1rem;
+		font-size: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		color: rgba(0, 0, 0, 0.438);
+	}
+}
+.hero-shadow {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+	position: absolute;
+	background-image: url(/Assets/logo_white_no_subtitles.svg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
+	top: 50%;
+	left: 50%;
+	width: 20rem;
+	height: 20rem;
+	transform: translate(-50%, -50%);
+	padding: 1rem;
+}
+// SECTIONS
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	article {
+		font-size: 1rem;
+		text-align: center;
+		padding: 1rem;
+	}
+	&__left {
+		position: relative;
+		display: flex;
+		min-height: 20rem;
+		&-img-first {
+			position: absolute;
+			width: 50%;
+			min-height: 100%;
+			background-image: url(/Assets/almonds.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&-img-second {
+			position: absolute;
+			width: 50%;
+			min-height: 100%;
+			background-image: url(/Assets/cocoa.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&-text {
+			position: absolute;
+			width: 50%;
+			right: 0;
+			min-height: 100%;
+			overflow: hidden;
+		}
+	}
+	&__right {
+		display: flex;
+		flex-direction: row-reverse;
+		min-height: 20rem;
+		&-img {
+			position: absolute;
+			width: 50%;
+			min-height: 20rem;
+			background-image: url(/Assets/chocolate.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&-text {
+			position: absolute;
+			width: 50%;
+			left: 0;
+			min-height: 100%;
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+////MEDIA QUERIES
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px) {
+	.nav {
+		min-height: 4rem;
+
+		&__logo {
+			min-height: 4rem;
+		}
+		&__list {
+			visibility: visible;
+		}
+		.burger {
+			visibility: hidden;
+		}
+	}
+}
