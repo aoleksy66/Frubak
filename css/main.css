@@ -84,13 +84,21 @@ a {
 }
 
 .header {
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #333;
   font-weight: 600;
+}
+
+header::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15px;
+  background-color: #000;
 }
 
 .hero-img {
@@ -172,44 +180,49 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 20rem;
 }
 .about__left-img-first {
   position: absolute;
-  width: 50%;
-  min-height: 100%;
+  width: 100%;
+  min-height: 20rem;
   background-image: url(/Assets/almonds.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .about__left-img-second {
   position: absolute;
-  width: 50%;
-  min-height: 100%;
+  width: 100%;
+  min-height: 20rem;
   background-image: url(/Assets/cocoa.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .about__left-text {
   position: absolute;
-  width: 50%;
-  right: 0;
-  min-height: 100%;
+  width: 100%;
+  bottom: 0;
+  min-height: 50%;
   overflow: hidden;
 }
 .about__right {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 20rem;
 }
 .about__right-img {
   position: absolute;
-  width: 50%;
+  width: 100%;
   min-height: 20rem;
   background-image: url(/Assets/chocolate.png);
   background-size: cover;
@@ -217,9 +230,9 @@ a {
 }
 .about__right-text {
   position: absolute;
-  width: 50%;
-  left: 0;
-  min-height: 100%;
+  width: 100%;
+  min-height: 50%;
+  bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -234,5 +247,61 @@ a {
   }
   .nav .burger {
     visibility: hidden;
+  }
+
+  .about__left {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 20rem;
+  }
+  .about__left-img-first {
+    position: absolute;
+    width: 50%;
+    min-height: 100%;
+    background-image: url(/Assets/almonds.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .about__left-img-second {
+    position: absolute;
+    width: 50%;
+    min-height: 100%;
+    background-image: url(/Assets/cocoa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .about__left-text {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    min-height: 100%;
+    overflow: hidden;
+  }
+  .about__right {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 20rem;
+  }
+  .about__right-img {
+    position: absolute;
+    width: 50%;
+    min-height: 20rem;
+    background-image: url(/Assets/chocolate.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .about__right-text {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    min-height: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

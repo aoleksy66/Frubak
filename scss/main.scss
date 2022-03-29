@@ -72,13 +72,20 @@ a {
 // NAV END
 //HEADER
 .header {
-	font-size: 4rem;
+	font-size: 2rem;
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	color: #333;
 	font-weight: 600;
+}
+header::before {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15px;
+	background-color: #000;
 }
 //HERO-IMG
 
@@ -144,11 +151,12 @@ a {
 	&__left {
 		position: relative;
 		display: flex;
+		flex-direction: column;
 		min-height: 20rem;
 		&-img-first {
 			position: absolute;
-			width: 50%;
-			min-height: 100%;
+			width: 100%;
+			min-height: 20rem;
 			background-image: url(/Assets/almonds.png);
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -156,27 +164,28 @@ a {
 
 		&-img-second {
 			position: absolute;
-			width: 50%;
-			min-height: 100%;
+			width: 100%;
+			min-height: 20rem;
 			background-image: url(/Assets/cocoa.png);
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
 		&-text {
 			position: absolute;
-			width: 50%;
-			right: 0;
-			min-height: 100%;
+			width: 100%;
+			bottom: 0;
+			min-height: 50%;
 			overflow: hidden;
 		}
 	}
 	&__right {
+		position: relative;
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: column;
 		min-height: 20rem;
 		&-img {
 			position: absolute;
-			width: 50%;
+			width: 100%;
 			min-height: 20rem;
 			background-image: url(/Assets/chocolate.png);
 			background-size: cover;
@@ -184,9 +193,9 @@ a {
 		}
 		&-text {
 			position: absolute;
-			width: 50%;
-			left: 0;
-			min-height: 100%;
+			width: 100%;
+			min-height: 50%;
+			bottom: 0;
 		}
 	}
 }
@@ -209,6 +218,58 @@ a {
 		}
 		.burger {
 			visibility: hidden;
+		}
+	}
+
+	.about {
+		&__left {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			min-height: 20rem;
+			&-img-first {
+				position: absolute;
+				width: 50%;
+				min-height: 100%;
+				background-image: url(/Assets/almonds.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			&-img-second {
+				position: absolute;
+				width: 50%;
+				min-height: 100%;
+				background-image: url(/Assets/cocoa.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			&-text {
+				position: absolute;
+				width: 50%;
+				right: 0;
+				min-height: 100%;
+				overflow: hidden;
+			}
+		}
+		&__right {
+			position: relative;
+			display: flex;
+			min-height: 20rem;
+			&-img {
+				position: absolute;
+				width: 50%;
+				min-height: 20rem;
+				background-image: url(/Assets/chocolate.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			&-text {
+				position: absolute;
+				width: 50%;
+				left: 0;
+				min-height: 100%;
+			}
 		}
 	}
 }
