@@ -112,7 +112,7 @@ header::before {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-text {
@@ -147,6 +147,8 @@ header::before {
 		font-size: 1rem;
 		text-align: center;
 		padding: 1rem;
+		color: white;
+		text-shadow: 2px 1px black;
 	}
 	&__left {
 		position: relative;
@@ -173,9 +175,8 @@ header::before {
 		&-text {
 			position: absolute;
 			width: 100%;
-			bottom: 0;
+			bottom: 25%;
 			min-height: 50%;
-			overflow: hidden;
 		}
 	}
 	&__right {
@@ -195,7 +196,7 @@ header::before {
 			position: absolute;
 			width: 100%;
 			min-height: 50%;
-			bottom: 0;
+			bottom: 25%;
 		}
 	}
 }
@@ -222,6 +223,8 @@ header::before {
 	}
 
 	.about {
+		border-radius: 20px;
+		overflow: hidden;
 		&__left {
 			position: relative;
 			display: flex;
@@ -261,7 +264,7 @@ header::before {
 				position: absolute;
 				width: 50%;
 				min-height: 20rem;
-				background-image: url(/Assets/chocolate.png);
+				background-image: url(/Assets/vanilla.png);
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
