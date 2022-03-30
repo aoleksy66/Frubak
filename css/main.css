@@ -9,7 +9,6 @@
 }
 
 body {
-  background-color: white;
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
 }
@@ -91,14 +90,6 @@ a {
   margin-bottom: 2rem;
   color: #333;
   font-weight: 600;
-}
-
-header::before {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 15px;
-  background-color: #000;
 }
 
 .hero-img {
@@ -189,6 +180,7 @@ header::before {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 20rem;
+  overflow: hidden;
 }
 .about__left-img-first {
   position: absolute;
@@ -209,7 +201,8 @@ header::before {
 .about__left-text {
   position: absolute;
   width: 100%;
-  bottom: 25%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   min-height: 50%;
 }
 .about__right {
@@ -222,6 +215,7 @@ header::before {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 20rem;
+  overflow: hidden;
 }
 .about__right-img {
   position: absolute;
@@ -234,8 +228,9 @@ header::before {
 .about__right-text {
   position: absolute;
   width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   min-height: 50%;
-  bottom: 25%;
 }
 
 @media (min-width: 768px) {
@@ -319,5 +314,11 @@ header::before {
     left: 0;
     bottom: 0;
     min-height: 100%;
+  }
+
+  .products {
+    width: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
 }/*# sourceMappingURL=main.css.map */

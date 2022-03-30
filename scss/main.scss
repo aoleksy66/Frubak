@@ -8,7 +8,6 @@
 }
 
 body {
-	background-color: white;
 	font-size: 62.5%;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -81,13 +80,7 @@ a {
 	color: #333;
 	font-weight: 600;
 }
-header::before {
-	position: absolute;
-	content: '';
-	height: 2px;
-	width: 15px;
-	background-color: #000;
-}
+
 //HERO-IMG
 
 .hero-img {
@@ -158,6 +151,7 @@ header::before {
 		display: flex;
 		flex-direction: column;
 		min-height: 20rem;
+		overflow: hidden;
 		&-img-first {
 			position: absolute;
 			width: 100%;
@@ -178,7 +172,8 @@ header::before {
 		&-text {
 			position: absolute;
 			width: 100%;
-			bottom: 25%;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
 			min-height: 50%;
 		}
 	}
@@ -187,6 +182,7 @@ header::before {
 		display: flex;
 		flex-direction: column;
 		min-height: 20rem;
+		overflow: hidden;
 		&-img {
 			position: absolute;
 			width: 100%;
@@ -198,8 +194,9 @@ header::before {
 		&-text {
 			position: absolute;
 			width: 100%;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
 			min-height: 50%;
-			bottom: 25%;
 		}
 	}
 }
@@ -283,5 +280,9 @@ header::before {
 				min-height: 100%;
 			}
 		}
+	}
+	.products {
+		width: 50%;
+		transform: translateX(50%);
 	}
 }
