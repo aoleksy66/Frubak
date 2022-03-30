@@ -233,6 +233,64 @@ a {
   min-height: 50%;
 }
 
+.contact {
+  position: relative;
+  background-color: lightgrey;
+}
+.contact h1 {
+  padding-top: 1.5rem;
+}
+.contact .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.6rem;
+  padding-bottom: 5rem;
+}
+.contact .cards__card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 7rem;
+  height: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+.contact .cards__card-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 45%;
+  background-image: url(../Assets/chocolate.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -230px;
+  visibility: hidden;
+}
+.contact .cards__card h5 {
+  font-size: 1rem;
+}
+.contact .cards__card .fa-linkedin-in,
+.contact .cards__card .fa-facebook,
+.contact .cards__card .fa-instagram {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+.contact .cards__card .fa-linkedin-in:hover,
+.contact .cards__card .fa-facebook:hover,
+.contact .cards__card .fa-instagram:hover {
+  color: #ddd;
+}
+
 @media (min-width: 768px) {
   .nav {
     min-height: 4rem;
@@ -320,5 +378,42 @@ a {
     width: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
+  }
+
+  .contact .cards {
+    gap: 2rem;
+  }
+  .contact .cards__card {
+    width: 15rem;
+    height: 20rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .contact .cards__card-img {
+    visibility: visible;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .contact .cards__card-img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .contact .cards__card h5 {
+    position: absolute;
+    font-size: 3em;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+    bottom: 30%;
+  }
+  .contact .cards__card .fa-linkedin-in,
+.contact .cards__card .fa-facebook,
+.contact .cards__card .fa-instagram {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+    bottom: 15%;
   }
 }/*# sourceMappingURL=main.css.map */
