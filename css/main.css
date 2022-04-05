@@ -10,7 +10,7 @@
 
 body {
   font-size: 62.5%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -69,7 +69,7 @@ a {
   color: black;
 }
 .nav__list-element:hover {
-  color: #ddd;
+  color: #ffcf4f;
 }
 .nav .burger {
   position: absolute;
@@ -83,6 +83,58 @@ a {
   font-size: 2rem;
 }
 
+.heading-block {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.heading-block__before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #ffcf4f;
+  border-radius: 8px;
+}
+.heading-block__before-black {
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black;
+  border-radius: 8px;
+}
+.heading-block__after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #ffcf4f;
+  border-radius: 8px;
+}
+.heading-block__after-black {
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black;
+  border-radius: 8px;
+}
+
 .header {
   font-size: 2rem;
   text-align: center;
@@ -93,6 +145,10 @@ a {
   font-weight: 600;
 }
 
+.secondary {
+  color: #ffcf4f;
+}
+
 .hero-img {
   position: relative;
   height: 100vh;
@@ -100,7 +156,6 @@ a {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 .hero-img .fa-circle-arrow-down {
   position: absolute;
@@ -110,7 +165,7 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.438);
+  color: #ffcf4f;
 }
 
 .hero-shadow {
@@ -234,6 +289,13 @@ a {
   min-height: 50%;
 }
 
+.shadow-light {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .contact {
   position: relative;
   background-color: lightgrey;
@@ -289,7 +351,18 @@ a {
 .contact .cards__card .fa-linkedin-in:hover,
 .contact .cards__card .fa-facebook:hover,
 .contact .cards__card .fa-instagram:hover {
-  color: #ddd;
+  color: #ffcf4f;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+}
+footer p {
+  text-align: right;
+  padding: 1em;
 }
 
 @media (min-width: 768px) {

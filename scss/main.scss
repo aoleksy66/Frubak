@@ -1,3 +1,5 @@
+$secondary: #ffcf4f;
+
 *,
 *::after,
 *::before {
@@ -9,7 +11,7 @@
 
 body {
 	font-size: 62.5%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 a {
 	cursor: pointer;
@@ -55,7 +57,7 @@ a {
 			color: black;
 
 			&:hover {
-				color: #ddd;
+				color: $secondary;
 			}
 		}
 	}
@@ -72,6 +74,53 @@ a {
 }
 // NAV END
 //HEADER
+.heading-block {
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	&__before {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 2rem;
+		height: 0.2rem;
+		background-color: $secondary;
+		border-radius: 8px;
+	}
+	&__before-black {
+		position: absolute;
+		left: -0.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 2rem;
+		height: 0.2rem;
+		background-color: black;
+		border-radius: 8px;
+	}
+
+	&__after {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 2rem;
+		height: 0.2rem;
+		background-color: $secondary;
+		border-radius: 8px;
+	}
+	&__after-black {
+		position: absolute;
+		right: -0.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 2rem;
+		height: 0.2rem;
+		background-color: black;
+		border-radius: 8px;
+	}
+}
 .header {
 	font-size: 2rem;
 	text-align: center;
@@ -82,6 +131,11 @@ a {
 	color: #333;
 	font-weight: 600;
 }
+
+.secondary {
+	color: $secondary;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 //HERO IMG
@@ -95,7 +149,6 @@ a {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
 
 	.fa-circle-arrow-down {
 		position: absolute;
@@ -104,7 +157,7 @@ a {
 		left: 50%;
 		transform: translateX(-50%);
 		cursor: pointer;
-		color: rgba(0, 0, 0, 0.438);
+		color: $secondary;
 	}
 }
 .hero-shadow {
@@ -209,6 +262,13 @@ a {
 		}
 	}
 }
+.shadow-light {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 //CONTACT
@@ -263,10 +323,25 @@ a {
 				color: black;
 
 				&:hover {
-					color: #ddd;
+					color: $secondary;
 				}
 			}
 		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+////FOOTER
+////////////////////////////////////////////////////////////////////////////////////
+footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+
+	p {
+		text-align: right;
+		padding: 1em;
 	}
 }
 
