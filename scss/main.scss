@@ -75,8 +75,10 @@ a {
 // NAV END
 //HEADER
 .heading-block {
+	display: flex;
+	justify-content: center;
 	position: relative;
-	width: 80%;
+	width: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 	&__before {
@@ -198,7 +200,7 @@ a {
 ////////////////////////////////////////////////////////////////////////////////////
 .about {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	overflow: hidden;
 	border-radius: 8px;
 	article {
@@ -266,7 +268,7 @@ a {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -365,12 +367,37 @@ footer {
 			visibility: hidden;
 		}
 	}
-
+	.header {
+		font-size: 3rem;
+	}
+	.heading-block {
+		width: 65%;
+		&__before {
+			width: 3.5rem;
+			height: 0.4rem;
+		}
+		&__before-black {
+			width: 3.5rem;
+			height: 0.3rem;
+		}
+		&__after {
+			width: 3.5rem;
+			height: 0.4rem;
+		}
+		&__after-black {
+			width: 3.5rem;
+			height: 0.3rem;
+		}
+	}
+	.shadow-light {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
 	.about {
 		border-radius: 20px;
 		overflow: hidden;
 		article {
 			text-shadow: none;
+			color: black;
 		}
 		&__left {
 			position: relative;
@@ -466,5 +493,10 @@ footer {
 				}
 			}
 		}
+	}
+}
+@media (min-width: 1400px) {
+	.heading-block {
+		width: 35%;
 	}
 }
