@@ -28,9 +28,9 @@ a {
 	z-index: 10;
 	color: rgb(255, 255, 255);
 	transition: 0.5s;
-
+	visibility: hidden;
 	&__logo {
-		position: absolute;
+		// position: absolute;
 		margin-left: 3rem;
 		margin-right: 0;
 		min-width: 8rem;
@@ -52,10 +52,11 @@ a {
 		width: 80%;
 		top: 1.5rem;
 		right: 0;
-		visibility: hidden;
+		// visibility: hidden;
 		&-element {
 			text-decoration: none;
 			color: black;
+			visibility: hidden;
 
 			&:hover {
 				color: $secondary;
@@ -74,7 +75,7 @@ a {
 	}
 }
 
-.hide-nav{
+.hide-nav {
 	// background-color: rgba(0, 0, 0, 0.5);
 	top: -150px;
 }
@@ -133,7 +134,6 @@ a {
 	font-size: 2rem;
 	text-align: center;
 	text-transform: uppercase;
-
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	color: #333;
@@ -160,7 +160,7 @@ a {
 
 	.fa-circle-arrow-down {
 		position: absolute;
-		bottom: 3rem;
+		bottom: 5rem;
 		font-size: 4rem;
 		left: 50%;
 		transform: translateX(-50%);
@@ -183,11 +183,11 @@ a {
 	background-size: contain;
 	background-repeat: no-repeat;
 	filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
-	top: 50%;
+	top: 10%;
 	left: 50%;
 	width: 20rem;
 	height: 20rem;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -10%);
 	padding: 1rem;
 }
 // SECTIONS
@@ -204,6 +204,7 @@ a {
 //ABOUT
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
+
 .about {
 	display: flex;
 	flex-direction: column-reverse;
@@ -362,16 +363,21 @@ footer {
 @media (min-width: 800px) {
 	.nav {
 		min-height: 4rem;
+		visibility: visible;
 
 		&__logo {
 			min-height: 4rem;
 		}
-		&__list {
+		&__list-element {
 			visibility: visible;
 		}
 		.burger {
 			visibility: hidden;
 		}
+	}
+	.hero-text {
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 	.header {
 		font-size: 3rem;

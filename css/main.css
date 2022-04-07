@@ -34,9 +34,9 @@ a {
   color: rgb(255, 255, 255);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  visibility: hidden;
 }
 .nav__logo {
-  position: absolute;
   margin-left: 3rem;
   margin-right: 0;
   min-width: 8rem;
@@ -64,11 +64,11 @@ a {
   width: 80%;
   top: 1.5rem;
   right: 0;
-  visibility: hidden;
 }
 .nav__list-element {
   text-decoration: none;
   color: black;
+  visibility: hidden;
 }
 .nav__list-element:hover {
   color: #ffcf4f;
@@ -171,7 +171,7 @@ a {
 }
 .hero-img .fa-circle-arrow-down {
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   font-size: 4rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -196,12 +196,12 @@ a {
   background-repeat: no-repeat;
   -webkit-filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
           filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
-  top: 50%;
+  top: 10%;
   left: 50%;
   width: 20rem;
   height: 20rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
   padding: 1rem;
 }
 
@@ -380,15 +380,22 @@ footer p {
 @media (min-width: 800px) {
   .nav {
     min-height: 4rem;
+    visibility: visible;
   }
   .nav__logo {
     min-height: 4rem;
   }
-  .nav__list {
+  .nav__list-element {
     visibility: visible;
   }
   .nav .burger {
     visibility: hidden;
+  }
+
+  .hero-text {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   .header {
