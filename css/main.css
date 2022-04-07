@@ -151,8 +151,8 @@ a {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   color: #333;
   font-weight: 600;
 }
@@ -162,7 +162,6 @@ a {
 }
 
 .hero-img {
-  position: relative;
   height: 100vh;
   background-image: url(../Assets/hero_img_small.png);
   background-attachment: fixed;
@@ -181,7 +180,6 @@ a {
 }
 
 .hero-shadow {
-  position: absolute;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -189,13 +187,9 @@ a {
 
 .hero-text {
   position: absolute;
-  background-image: url(../Assets/logo_white_no_subtitles.svg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  -webkit-filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
-          filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 10%;
   left: 50%;
   width: 20rem;
@@ -203,6 +197,18 @@ a {
   -webkit-transform: translate(-50%, -10%);
           transform: translate(-50%, -10%);
   padding: 1rem;
+}
+.hero-text__img {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-image: url(../Assets/logo_white_no_subtitles.svg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
+          filter: drop-shadow(3px 5px 5px rgba(255, 255, 255, 0.35));
 }
 
 .wrapper {
