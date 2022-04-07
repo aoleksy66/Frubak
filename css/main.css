@@ -32,6 +32,8 @@ a {
   background-color: rgba(204, 204, 204, 0.479);
   z-index: 10;
   color: rgb(255, 255, 255);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .nav__logo {
   position: absolute;
@@ -81,6 +83,10 @@ a {
   right: 0;
   cursor: pointer;
   font-size: 2rem;
+}
+
+.hide-nav {
+  top: -150px;
 }
 
 .heading-block {
@@ -165,8 +171,8 @@ a {
 }
 .hero-img .fa-circle-arrow-down {
   position: absolute;
-  bottom: 1rem;
-  font-size: 3rem;
+  bottom: 3rem;
+  font-size: 4rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -371,7 +377,7 @@ footer p {
   padding: 1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .nav {
     min-height: 4rem;
   }

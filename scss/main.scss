@@ -27,6 +27,7 @@ a {
 	background-color: rgba(204, 204, 204, 0.479);
 	z-index: 10;
 	color: rgb(255, 255, 255);
+	transition: 0.5s;
 
 	&__logo {
 		position: absolute;
@@ -71,6 +72,11 @@ a {
 		cursor: pointer;
 		font-size: 2rem;
 	}
+}
+
+.hide-nav{
+	// background-color: rgba(0, 0, 0, 0.5);
+	top: -150px;
 }
 // NAV END
 //HEADER
@@ -353,7 +359,7 @@ footer {
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
 	.nav {
 		min-height: 4rem;
 
